@@ -14,7 +14,7 @@ header{
     background-color: var(--background-color);
     height: 100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -24,6 +24,8 @@ header h1{
 
 header .fa-bars{
     font-size: 18px;
+    position: absolute;
+    left: 50px;
 }
 header i:hover{
     cursor: pointer;
