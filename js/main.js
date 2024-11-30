@@ -1,9 +1,9 @@
 const menuBtn = document.getElementById('menuBtn');
-const nav = document.querySelector('nav');
+const headerContent = document.querySelector('.header-content');
 const languageDiv = document.getElementById('languageDiv');
 const languageMenu = document.getElementById('languageMenu')
 menuBtn.addEventListener('click', ()=>{
-    nav.classList.toggle('show');
+    headerContent.classList.toggle('show');
     languageMenu.classList.remove('show-language-menu')
 })
 

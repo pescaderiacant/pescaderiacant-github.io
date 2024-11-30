@@ -29,16 +29,24 @@ header i:hover{
     cursor: pointer;
 }
 
-.language-main{
+
+.header-content{
+    height: 0;
     display: flex;
-    padding: 3px;
-    width: 30px;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    height: 0;
+    overflow: hidden;
+    background-color: var(--background-color);
+    transition: height .3s;
+    width: 100%;
 }
-.language-main:hover{
-    cursor: pointer;
-    color: var(--hover-color);
+.language{
+    margin-left: 25px;
+    display: flex;
 }
 .language h4{
     font-weight: 600;
@@ -46,45 +54,19 @@ header i:hover{
     transition: color .3s;
     text-align: center;
 }
-.fa-caret-down{
-    transition: color .3s;
+.language-main { 
+    margin-right: 10px;
+    color: var(--hover-color);
 }
-
-.language-menu{
-    height: 0;
-    overflow: hidden;
+.language-main i{
+    display: none;
 }
 .language-menu:hover{
-    cursor: pointer;
-    text-decoration: underline;
-}
-.show-language-menu{
-    height: 20px;
-    position: absolute;
-    width: 30px;
-    padding: 3px;
-    background-color: var(--hover-color);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: height .3s;
+    color: var(--hover-color);
+    cursor:pointer;
 }
 
 
-
-
-nav{
-    display: flex;
-    position: absolute;
-    left: 0;
-    top: 60px;
-    height: 0;
-    overflow: hidden;
-    background-color: var(--background-color);
-    transition: height .3s;
-    width: 100%;
-}
 nav ul{
     display: flex;
     flex-direction: column;
@@ -110,7 +92,7 @@ nav ul li a:hover{
     color: var(--hover-color);
 }
 .show{
-    height: 100px;
+    height: 110px;
 }
 .hero img{
     width: 100%;
@@ -283,7 +265,61 @@ footer h4{
     header .fa-bars{
         display: none;
     }
+    .header-content{
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        position: static;
+        width: auto;
+    }
+    .language{
+        margin: 0;
+        display: block;
+    }
+    .language-main{
+        display: flex;
+        padding: 3px;
+        width: 30px;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--text-color);
+    }
+    .language-main i{
+        display: block;
+    }
+    .language-main:hover{
+        color: var(--hover-color);
+        cursor: pointer;
+    }
+   
+    
+    
+    .fa-caret-down{
+        transition: color .3s;
+    }
+    
+    .language-menu{
+        height: 0;
+        overflow: hidden;
+    }
+    .language-menu:hover{
+        cursor: pointer;
+        text-decoration: underline;
+        color: #fff;
 
+    }
+    .show-language-menu{
+        height: 20px;
+        position: absolute;
+        width: 30px;
+        padding: 3px;
+        background-color: var(--hover-color);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: height .3s;
+    }
     .header-content{
         display: flex;
         align-items: center;
